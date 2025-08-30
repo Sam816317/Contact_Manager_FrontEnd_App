@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <script src="/javascripts/contact_manager.js"></script>
+  <link rel="stylesheet" href="/stylesheets/contact_manager.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Manager</h1>
+    <button id="add-contact-button" class="add_contact btn" >Add Contact</button>
+    <button id="create-tag-button" class="btn" >Create New Tag</button>
+    <div id="searchby_nameandtag">
+      <div id="search_by_name_div">
+        <label for="search_name">Search by name:</label>
+        <input type=text name="search_name" placeholder="Search" id="search_name" maxlength='30'>
+      </div>
+
+      <div id="search_by_tag_div">
+        <label for="search_tag_select">Search by tag:</label>
+        <select name="search_tag" id="search_tag_select">
+          <option value="" disabled selected>Select a tag</option>
+        </select>
+        <button type="button" id="clear_tag_btn">Clear tag selection</button>
+      <div>
+    </div>
+  </header>
+  <main>
+
+    <form id="tag-form" class="hide-form">
+      <label for="tag_name">Enter tag name:</label>
+      <input type="text" name="tag_name" id="tag_name">
+      <input type="submit" value="Create">
+      <button type="button" id="cancel-create-tag-button">Cancel</button>
+    </form>
+
+    <form action="" method="" class="styled-form hide-form" novalidate>
+      <p>Create Contact</p>
+      <fieldset>
+        <dl>
+          <dt><label for="full_name">Full name:</label></dt>
+          <dd>
+            <span class="error_message"></span>
+            <input type="text" name="full_name" id="full_name" maxlength="50" placeholder="" required>
+          </dd>
+        </dl>
+        <dl>
+          <dt><label for="email">Email address:</label></dt>
+          <dd>
+            <span class="error_message"></span>
+            <input type='text' name="email" id="email" pattern=".+@.+"  placeholder="someone@example.com" required>
+          </dd>
+        </dl>
+        <dl>
+          <dt><label for="phone_number">Phone number:</label></dt>
+          <dd>
+            <span class="error_message"></span>
+            <input type="text" name="phone_number" id="phone_number" pattern='^\d{10}$' placeholder="1112223333" required>
+          </dd>
+        </dl>
+        <dl>
+          <dt><label for="assign_contact_tag_select">Tag:</label></dt>
+          <dd>
+            <span class="error_message"></span>
+            <select name='tags' id="assign_contact_tag_select" multiple required></select>
+          </dd>
+        </dl>
+      </fieldset>
+      <input type="submit" id="form-submit" value="Submit">
+      <button type="button" id="cancel_button">Cancel</button>
+    </form>
+
+    <div id="no-matching-contacts-placeholder" class="hide">
+      <h3></h3>
+    </div>
+
+    <ul class="contacts-container"></ul>
+
+  </main>
+</body>
+</html>

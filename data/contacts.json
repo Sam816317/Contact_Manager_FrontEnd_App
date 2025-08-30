@@ -1,0 +1,30 @@
+[
+  {
+    "full_name": "Samuel Meka",
+    "phone_number": "7893463405",
+    "email": "samuel.meka211@gmail.com",
+    "tags": "Engineering",
+    "id": 1
+  },
+  {
+    "full_name": "Henry Lee",
+    "phone_number": "7778881234",
+    "email": "henry@gmail.com",
+    "tags": "Marketing",
+    "id": 5
+  },
+  {
+    "full_name": "Divia Meka",
+    "phone_number": "4445557777",
+    "email": "div772@gmail.com",
+    "tags": "Family",
+    "id": 9
+  },
+  {
+    "full_name": "Isaac Nie",
+    "phone_number": "7652349876",
+    "email": "isaacnie@hotmail.com",
+    "tags": "Engineering",
+    "id": 11
+  }
+]
